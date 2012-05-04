@@ -1,0 +1,12 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jmix:mp3Player] mixin
+ extends=jnt:virtualsite
+ itemtype=options
+ - leftbg (string, color) = 'CCCCCC'
+ - rightbg (string, color) = '0099FF'
+ - rightbghover (string, color) = '008ae5'
+ - lefticon (string, color) = 'FFFFFF'
+ - righticon (string, color) = 'FFFFFF'
+ - height (double) = 50
