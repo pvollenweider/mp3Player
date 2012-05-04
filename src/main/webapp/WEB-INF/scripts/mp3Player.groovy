@@ -4,7 +4,8 @@ println("<script type=\"text/javascript\" src=\"/modules/mp3Player/javascript/jq
         "\$(document).ready(function() {\n" +
             "\$(\"a[href\$='.mp3']\").each(function() {\n" +
              "title = \$(this).attr('title');\n"+
-             "if (title != \"Download\"){\n" +
+        "id = \$(this).attr('id');\n"+
+             "if (title != \"Download\" && id != \"download\" ){\n" +
 
               "audio_file = \$(this).attr('href');\n" +
 

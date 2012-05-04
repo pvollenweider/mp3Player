@@ -42,16 +42,16 @@ public class MP3PlayerFilter extends AbstractFilter implements ApplicationListen
         String out = previousOut;
 
 
-        String leftbg = renderContext.getSite().hasProperty("leftbg") ? renderContext.getSite().getProperty("leftbg").getString() : "CCCCCC";
-        String rightbg = renderContext.getSite().hasProperty("rightbg") ? renderContext.getSite().getProperty("rightbg").getString() : "0099FF";
-        String rightbghover = renderContext.getSite().hasProperty("rightbghover") ? renderContext.getSite().getProperty("rightbghover").getString() : "008ae5";
-        String lefticon = renderContext.getSite().hasProperty("lefticon") ? renderContext.getSite().getProperty("lefticon").getString() : "FFFFFF";
-        String righticon = renderContext.getSite().hasProperty("righticon") ? renderContext.getSite().getProperty("righticon").getString() : "FFFFFF";
+        String leftbg = renderContext.getSite().hasProperty("leftbg") ? renderContext.getSite().getProperty("leftbg").getString() : null;
+        String rightbg = renderContext.getSite().hasProperty("rightbg") ? renderContext.getSite().getProperty("rightbg").getString() : null;
+        String rightbghover = renderContext.getSite().hasProperty("rightbghover") ? renderContext.getSite().getProperty("rightbghover").getString() : null;
+        String lefticon = renderContext.getSite().hasProperty("lefticon") ? renderContext.getSite().getProperty("lefticon").getString() : null;
+        String righticon = renderContext.getSite().hasProperty("righticon") ? renderContext.getSite().getProperty("righticon").getString() : null;
         String height = renderContext.getSite().hasProperty("height") ? renderContext.getSite().getProperty("height").getString() : "50";
 
         String script = getResolvedTemplate();
 
-        if (script != null) {
+        if (script != null && leftbg != null && rightbg != null && rightbghover != null && lefticon != null && righticon != null) {
             Source source = new Source(previousOut);
             OutputDocument outputDocument = new OutputDocument(source);
 
